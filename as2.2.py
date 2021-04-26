@@ -38,11 +38,12 @@ b_modulo = modulo(a - c)
 c_modulo = modulo(a - b)
 
 funcao regra(absoluto, primeiro, segundo, terceiro):
-    se absoluto < primeiro and primeiro < (segundo + terceiro):
-    
+    se absoluto < primeiro and primeiro < (segundo + terceiro):    
         imprima(primeiro,"é um número válido! ")
+        retornar
     senao:
         imprima(primeiro,"não é um número válido! ")
+        retornar
     fimse
 
 regra(aABS, a, b, c)
@@ -62,8 +63,10 @@ cABS = abs(a - b) # terceiro modulo
 def regra(abs, prim, seg, terc): #cria uma função chamada regra pra verificar os angulos (basicamente se um ta errado, todos estão)
     if(abs < prim and prim < (seg + terc)): #se ta conforme a regra
         print(prim,"é um número válido! ") # é um valor valido
+        return
     else:
         print(prim,"não é um número válido! ") # se não, não era valido
+        return
         
 regra(aABS, a, b, c) #chamando a função com esses valores
 regra(bABS, b, a, c) # denovo
